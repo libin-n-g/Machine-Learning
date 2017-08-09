@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 list = [1,2,3,4,5]
 print type(list)
@@ -14,3 +15,8 @@ print array3
 print array2
 print np.add(array2, array3)
 print array2, "*", array3, "=", np.multiply(array2, array3)
+x, y = np.random.multivariate_normal([0, 0],[[1, 0], [0, 1]], 2000).T
+plt.plot(x, y, 'x')
+plt.axis('equal')
+plt.show()
+
